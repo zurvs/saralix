@@ -34,7 +34,6 @@ local window = library:AddWindow("Saralix Main â”ƒ Private access", {
     min_size = Vector2.new(500, 750),
     can_resize = false,
 })
-
 local Player = game:GetService("Players").LocalPlayer
 
 local MainTab = window:AddTab("Main")
