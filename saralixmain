@@ -1,10 +1,35 @@
+local whitelistedUsers = {
+    "Itsmissasalt_x", -- Whitelist 1
+    "ThatKingJohnathon", -- Whitelist 2
+    "Terrionp20", -- Whitelist 3
+    "Roman90316", -- Whitelist 4
+    "Eil18407", -- Whitelist 5
+}
+
+local function isWhitelisted(username)
+    --[[
+    for _, whitelisted in ipairs(whitelistedUsers) do
+        if username == whitelisted then
+            return true
+        end
+    end
+    return false
+    ]]
+    return true
+end
+
 local player = game.Players.LocalPlayer
 local username = player.Name
+
+if not isWhitelisted(username) then
+   -- game.Players.LocalPlayer:Kick("Not Whitelisted.")
+   return true
+end
 
 -- local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/0o0o0o0o0o0o0o0o0o0o0o0o/0o/refs/heads/main/CRUSHER.lua", true))() 
 local library = loadstring(game:HttpGet("https://pastebin.com/CiCPgqnW", true))() -- preventing vulns
 
-local window = library:AddWindow("Saralix", {
+local window = library:AddWindow("Saralix Main â”ƒ Private access", {
     main_color = Color3.fromRGB(0, 0, 0),
     min_size = Vector2.new(500, 750),
     can_resize = false,
@@ -2206,4 +2231,5 @@ SpecsTab:AddLabel("Version 1.1.1")
 SpecsTab:AddLabel("Thank you for using the script!")
 SpecsTab:AddLabel("Made by idk")
 SpecsTab:AddLabel("I hope you like the script, for bugs or suggestions on my discord server")
+
 SpecsTab:AddLabel("Discord Server:")
