@@ -26,7 +26,6 @@ if not isWhitelisted(username) then
    return true
 end
 
--- local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/0o0o0o0o0o0o0o0o0o0o0o0o/0o/refs/heads/main/CRUSHER.lua", true))() 
 local library = loadstring(game:HttpGet("https://pastebin.com/CiCPgqnW", true))() -- preventing vulns
 
 local window = library:AddWindow("Saralix Main â”ƒ Private access", {
